@@ -54,7 +54,11 @@
 
 #define HANDY_SYSTEM_FREQ                       16000000
 #define HANDY_TIMER_FREQ                        20
+#if !defined(SF2000)
 #define HANDY_AUDIO_SAMPLE_FREQ                 48000
+#else
+#define HANDY_AUDIO_SAMPLE_FREQ                 11025
+#endif
 #define HANDY_AUDIO_SAMPLE_PERIOD               (HANDY_SYSTEM_FREQ/HANDY_AUDIO_SAMPLE_FREQ)
 #define HANDY_AUDIO_WAVESHAPER_TABLE_LENGTH     0x200000
 
